@@ -15,7 +15,7 @@
 .card__title {
   font-weight: 500;
   size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
 }
 
 .card__like-button {
