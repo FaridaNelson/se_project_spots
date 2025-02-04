@@ -10,12 +10,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0 0;
 }
 
 .card__title {
   font-weight: 500;
-  size: 20px;
+  font-size: 20px;
   line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 390px;
+  margin: 0;
+  color: #212121;
 }
 
 .card__like-button {
@@ -33,7 +40,12 @@
   }
 
   .card__title {
-    margin: 12px 0 22px;
+    margin: 0;
     font-size: 16px;
+    max-width: 265px;
+  }
+
+  .card__description {
+    padding: 12px 0 20px;
   }
 }
