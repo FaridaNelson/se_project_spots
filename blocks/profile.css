@@ -58,7 +58,7 @@
   gap: 8px;
   background-color: transparent;
   border: none;
-  border-radius: 0.9;
+  border-radius: 90px;
 }
 
 .profile__add-button {
@@ -97,14 +97,14 @@
   .profile__title {
     font-size: 20px;
     margin: 0 0 6px;
-    max-width: 288;
+    max-width: 288px;
   }
 
   .profile__description {
     font-size: 16px;
     line-height: 1;
     margin: 0 0 32px;
-    max-width: 288;
+    max-width: 288px;
   }
 
   .profile__column {
