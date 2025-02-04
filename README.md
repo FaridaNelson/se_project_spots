@@ -1,21 +1,41 @@
-# Project 3: Spots
+# Spots
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Spots is a modern and elegant website showcasing various scenic locations. It features a clean and responsive design, allowing users to view images of different places, edit their profiles, and add new posts. The website is structured with a profile section, a list of location cards, and a footer.
+
+## Technologies Used
+
+- **HTML**: Structuring the website layout
+- **CSS**: Styling the components and ensuring responsiveness
+- **Flexbox**: Arranging elements dynamically
+- **Git & GitHub**: Version control and deployment
+- **BEM filestructure**: All files are structured according the BEM methodology
+
+## Features
+
+- **User Profile**: Displays an avatar, name, and description.
+- **Edit Profile Button**: Allows users to update their information.
+- **Add New Post Button**: Provides functionality to create a new post.
+- **Cards Section**: Displays images of various scenic locations with titles and like buttons.
+- **Responsive Design**: Optimized for different screen sizes using media queries.
+
+## Screenshots
+
+![Homepage Screenshot](./images/screenshots/mainpage-Screenshot.png)
+![Profile Section](./images/screenshots/Profilesection-Screenshot.png)
+![Mobile phone Screenshot](./images/screenshots/Phoneversion-Screenshot.png)
+![Mobile phone Profile Screenshot](./images/screenshots/Profile-mobileversion.png)
+![Mobile phone Footer Screenshot](./images/screenshots/Footer-phoneversion.png)
+
+## Deployment
+
+The project is hosted on **GitHub Pages**. You can visit it here:
+
+Live Demo
+
+[Spots GitHub Pages Deployment](https://faridanelson.github.io/se_project_spots/)
+
+## Author
+
+Farida Nelson
