@@ -36,6 +36,12 @@ Live Demo
 
 [Spots GitHub Pages Deployment](https://faridanelson.github.io/se_project_spots/)
 
+## Descriptive Video
+
+I have created a desciptive video of the project. You can watch it here:
+
+[[Descriptive Video]](https://drive.google.com/file/d/1BL5wsUZipyhruowlOKiAoG0ZwIwoPb14/view?usp=sharing)
+
 ## Author
 
 Farida Nelson
