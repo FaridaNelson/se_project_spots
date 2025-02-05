@@ -71,6 +71,7 @@
   height: fit-content;
   padding: 18px 32px;
   border-radius: 8px;
+  border: none;
   white-space: nowrap;
   display: flex;
   gap: 8px;
