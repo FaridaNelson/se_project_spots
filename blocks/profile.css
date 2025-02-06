@@ -74,7 +74,6 @@
 
 .profile__edit-button:hover {
   opacity: 1;
-  cursor: url(../images/hand.svg), auto;
 }
 
 .profile__add-button {
