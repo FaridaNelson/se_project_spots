@@ -35,6 +35,11 @@
   cursor: pointer;
 }
 
+.card__like-button:hover {
+  opacity: 100%;
+  cursor: url(../images/hand.svg), auto;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;

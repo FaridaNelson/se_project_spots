@@ -72,6 +72,11 @@
   display: inline-block;
 }
 
+.profile__edit-button:hover {
+  opacity: 1;
+  cursor: url(../images/hand.svg), auto;
+}
+
 .profile__add-button {
   margin: auto 0 0 auto;
   width: 159px;
@@ -97,6 +102,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: inline-block;
+}
+
+.profile__add-button:hover {
+  opacity: 80%;
+  cursor: url(../images/hand.svg), auto;
 }
 
 @media screen and (max-width: 627px) {
