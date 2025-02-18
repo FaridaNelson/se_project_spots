@@ -24,3 +24,19 @@ const initialCards = [
     link: "https://unsplash.com/photos/a-view-of-a-white-village-on-a-cliff-TRyUyUfm_wU",
   },
 ];
+
+const profileEditButton = document.querySelector(".profile__edit-button");
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const modalCloseButton = document.querySelector(".modal__close-button");
+
+function openModal() {
+  editProfileModal.classList.add("modal_opened");
+}
+
+profileEditButton.addEventListener("click", openModal);
+
+function closeModal() {
+  editProfileModal.classList.remove("modal_opened");
+}
+
+modalCloseButton.addEventListener("click", closeModal);
