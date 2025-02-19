@@ -25,18 +25,41 @@ const initialCards = [
   },
 ];
 
-const profileEditButton = document.querySelector(".profile__edit-button");
-const editProfileModal = document.querySelector("#edit-profile-modal");
-const modalCloseButton = document.querySelector(".modal__close-button");
+document.addEventListener("DOMContentLoaded", function () {
+  const profileEditButton = document.querySelector(".profile__edit-button");
+  const profileName = document.querySelector(".profile__title");
+  const profileDescription = document.querySelector(".profile__description");
 
-function openModal() {
-  editProfileModal.classList.add("modal_opened");
-}
+  const editProfileModal = document.querySelector("#edit-profile-modal");
+  const modalFormElement = editProfileModal.querySelector(".modal__form");
+  const modalCloseButton = editProfileModal.querySelector(
+    ".modal__close-button"
+  );
+  const modalProfileName = editProfileModal.querySelector(
+    "#profile-name-input"
+  );
+  const modalProfileDescription = editProfileModal.querySelector(
+    "#profile-description-input"
+  );
 
-profileEditButton.addEventListener("click", openModal);
+  function openModal() {
+    modalProfileName.value = profileName.textContent;
+    modalProfileDescription.value = profileDescription.textContent;
+    editProfileModal.classList.add("modal_opened");
+  }
 
-function closeModal() {
-  editProfileModal.classList.remove("modal_opened");
-}
+  function closeModal() {
+    editProfileModal.classList.remove("modal_opened");
+  }
 
-modalCloseButton.addEventListener("click", closeModal);
+  function handleModalFormSubmit(evt) {
+    evt.preventDefault();
+    profileName.textContent = modalProfileName.value;
+    profileDescription.textContent = modalProfileDescription.value;
+    closeModal();
+  }
+
+  profileEditButton.addEventListener("click", openModal);
+  modalCloseButton.addEventListener("click", closeModal);
+  modalFormElement.addEventListener("submit", handleModalFormSubmit);
+});
