@@ -42,7 +42,11 @@
                 <img src="" alt="" class="card__image" />
                 <div class="card__description">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-button"></button>
+                  <button
+                    type="button"
+                    class="card__like-button"
+                    aria-label="Like this card"
+                  ></button>
                 </div>
               </li>
             </template>
@@ -54,7 +58,11 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-button"></button>
+          <button
+            type="button"
+            class="modal__close-button"
+            aria-label="Close form"
+          ></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
