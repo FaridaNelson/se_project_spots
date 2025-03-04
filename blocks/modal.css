@@ -198,3 +198,9 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 363px) {
+  .modal__image {
+    min-width: 288px;
+  }
+}
