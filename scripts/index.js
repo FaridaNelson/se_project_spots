@@ -98,10 +98,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function openModal(modal) {
     modal.classList.add("modal_opened");
+    document.addEventListener("keydown", closeOnEscape);
+    modal.addEventListener("click", closeOnOverlayClick);
   }
 
   function closeModal(modal) {
     modal.classList.remove("modal_opened");
+    document.removeEventListener("keydown", closeOnEscape);
+    modal.removeEventListener("click", closeOnOverlayClick);
+    document.activeElement.blur();
+  }
+
+  function closeOnOverlayClick(event) {
+    if (event.target.classList.contains("modal")) {
+      closeModal(event.target);
+    }
+  }
+  function closeOnEscape(event) {
+    if (event.key === "Escape") {
+      const openedModal = document.querySelector(".modal_opened");
+      if (openedModal) {
+        closeModal(openedModal);
+      }
+    }
   }
 
   function handleModalFormSubmit(evt) {
