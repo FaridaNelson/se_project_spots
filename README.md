@@ -6,19 +6,26 @@ Spots is a modern and elegant website showcasing various scenic locations. It fe
 
 ## Technologies Used
 
-- **HTML**: Structuring the website layout
-- **CSS**: Styling the components and ensuring responsiveness
-- **Flexbox**: Arranging elements dynamically
-- **Git & GitHub**: Version control and deployment
-- **BEM filestructure**: All files are structured according the BEM methodology
+- **HTML: Structuring the website layout.
+- **CSS: Styling the components and ensuring responsiveness.
+- **JavaScript (ES6+): Enabling interactive features such as form validation, dynamic card rendering, and modal handling.
+- **Flexbox & Grid: Arranging elements dynamically for a flexible and responsive design.
+- **Git & GitHub: Version control and deployment.
+- **BEM File Structure: Ensuring modular and scalable CSS architecture.
+- **Form Validation: Implemented using JavaScript to provide real-time feedback on user input.
+- **Event Listeners & DOM Manipulation: Used for handling user interactions and dynamically updating content.
 
-## Features
+Features
 
-- **User Profile**: Displays an avatar, name, and description.
-- **Edit Profile Button**: Allows users to update their information.
-- **Add New Post Button**: Provides functionality to create a new post.
-- **Cards Section**: Displays images of various scenic locations with titles and like buttons.
-- **Responsive Design**: Optimized for different screen sizes using media queries.
+- **User Profile: Displays an avatar, name, and description.
+- **Edit Profile Button: Allows users to update their information through a modal form.
+- **Add New Post Button: Provides functionality to create a new post with an image and caption.
+- **Cards Section: Displays images of various scenic locations with titles, like buttons, and delete options.
+- **Like Functionality: Users can like or unlike a card.
+- **Image Preview Modal: Clicking on a card image opens a larger preview.
+- **Real-Time Form Validation: Ensures input fields meet requirements before submission.
+- **Disabled Submit Button Until Valid Input: Prevents empty or invalid submissions.
+- **Responsive Design: Optimized for different screen sizes using media queries.
 
 ## Screenshots
 
