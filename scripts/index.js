@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const cardModal = document.querySelector("#add-card-modal");
   const cardFormElement = cardModal.querySelector(".modal__form");
+  const cardSubmitButton = cardModal.querySelector(".modal__submit-button");
   const cardLinkInput = cardModal.querySelector("#add-card-link-input");
   const cardCaptionInput = cardModal.querySelector("#add-card-caption-input");
 
@@ -120,12 +121,18 @@ document.addEventListener("DOMContentLoaded", function () {
     cardsList.prepend(cardElement);
 
     cardFormElement.reset();
+    disableButton(cardSubmitButton, settings);
     closeModal(cardModal);
   }
 
   profileEditButton.addEventListener("click", () => {
     modalProfileName.value = profileName.textContent;
     modalProfileDescription.value = profileDescription.textContent;
+    resetValidation(
+      editProfileModal,
+      [modalProfileName, modalProfileDescription],
+      settings
+    );
     openModal(editProfileModal);
   });
 

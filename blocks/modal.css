@@ -123,6 +123,10 @@
   cursor: pointer;
 }
 
+.modal__form input.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__input::placeholder {
   color: rgba(33, 33, 33, 0.4);
   opacity: 1;
@@ -139,6 +143,12 @@
   cursor: text;
 }
 
+.modal__error {
+  display: block;
+  color: #ff0000b2;
+  font-size: 16px;
+}
+
 .modal__submit-button {
   border: none;
   width: 156px;
@@ -146,6 +156,12 @@
   border-radius: 8px;
   color: #fcf5e5;
   background-color: #212121;
+}
+
+.modal__submit-button_disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .modal__submit-button:hover {
