@@ -88,3 +88,5 @@ const enableValidation = (config) => {
 document.addEventListener("DOMContentLoaded", () => {
   enableValidation(settings);
 });
+
+export { resetValidation, disableButton, settings };

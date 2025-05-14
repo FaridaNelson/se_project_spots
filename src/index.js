@@ -1,3 +1,18 @@
+import "./pages/index.css";
+import "./scripts/validation.js";
+import "./vendor/normalize.css";
+import "./vendor/fonts.css";
+import logo from "./images/logo.svg";
+import avatar from "./images/avatar.jpg";
+import {
+  resetValidation,
+  disableButton,
+  settings,
+} from "./scripts/validation.js";
+
+document.querySelector(".header__logo").src = logo;
+document.querySelector(".profile__avatar").src = avatar;
+
 const initialCards = [
   {
     name: "New York Library",
