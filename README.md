@@ -2,53 +2,87 @@
 
 ## Description
 
-Spots is a modern and elegant website showcasing various scenic locations. It features a clean and responsive design, allowing users to view images of different places, edit their profiles, and add new posts. The website is structured with a profile section, a list of location cards, and a footer.
+**Spots** is a modern and elegant website showcasing various scenic locations. It features a clean and responsive design, allowing users to view images of different places, edit their profiles, and add new posts. The website is structured with a profile section, a list of location cards, and a footer.
 
-## Technologies Used
+---
 
-- **HTML: Structuring the website layout.
-- **CSS: Styling the components and ensuring responsiveness.
-- **JavaScript (ES6+): Enabling interactive features such as form validation, dynamic card rendering, and modal handling.
-- **Flexbox & Grid: Arranging elements dynamically for a flexible and responsive design.
-- **Git & GitHub: Version control and deployment.
-- **BEM File Structure: Ensuring modular and scalable CSS architecture.
-- **Form Validation: Implemented using JavaScript to provide real-time feedback on user input.
-- **Event Listeners & DOM Manipulation: Used for handling user interactions and dynamically updating content.
+## ⚙️ Technologies Used
 
-Features
+- **HTML**: Structuring the website layout
+- **CSS (BEM Methodology)**: Modular and scalable component styling
+- **JavaScript (ES6+)**: Interactive features such as form validation, dynamic card rendering, and modal handling
+- **Flexbox & Grid**: Responsive layout and design
+- **Webpack**: Module bundling, asset management, and development server
+- **PostCSS (Autoprefixer, CSSNano)**: CSS optimization
+- **Babel**: JavaScript transpilation for cross-browser compatibility
+- **Git & GitHub**: Version control and deployment
 
-- **User Profile: Displays an avatar, name, and description.
-- **Edit Profile Button: Allows users to update their information through a modal form.
-- **Add New Post Button: Provides functionality to create a new post with an image and caption.
-- **Cards Section: Displays images of various scenic locations with titles, like buttons, and delete options.
-- **Like Functionality: Users can like or unlike a card.
-- **Image Preview Modal: Clicking on a card image opens a larger preview.
-- **Real-Time Form Validation: Ensures input fields meet requirements before submission.
-- **Disabled Submit Button Until Valid Input: Prevents empty or invalid submissions.
-- **Responsive Design: Optimized for different screen sizes using media queries.
+---
 
-## Screenshots
+## 🧩 Features
 
-![Homepage Screenshot](./images/screenshots/mainpage-Screenshot.png)
-![Profile Section](./images/screenshots/Profilesection-Screenshot.png)
-![Mobile phone Screenshot](./images/screenshots/Phoneversion-Screenshot.png)
-![Mobile phone Profile Screenshot](./images/screenshots/Profile-mobileversion.png)
-![Mobile phone Footer Screenshot](./images/screenshots/Footer-phoneversion.png)
+- **User Profile**: Displays an avatar, name, and description
+- **Edit Profile Button**: Opens a modal to update user info
+- **Add New Post Button**: Allows users to add a new card with an image and caption
+- **Cards Section**: Shows scenic location cards with like and delete options
+- **Like Functionality**: Toggle likes on individual cards
+- **Image Preview Modal**: Click on a card image to see a larger preview
+- **Real-Time Form Validation**: Inputs must be valid before submission
+- **Disabled Submit Button Until Valid Input**: Improves form UX
+- **Responsive Design**: Optimized for desktop and mobile using media queries
+- **Webpack Dev Server**: Live reloading and modern build tools
 
-## Deployment
+---
 
-The project is hosted on **GitHub Pages**. You can visit it here:
+## 📸 Screenshots
 
-Live Demo
+![Homepage Screenshot](./images/screenshots/mainpage-Screenshot.png)  
+![Profile Section](./images/screenshots/Profilesection-Screenshot.png)  
+![Mobile Screenshot](./images/screenshots/Phoneversion-Screenshot.png)  
+![Mobile Profile Screenshot](./images/screenshots/Profile-mobileversion.png)  
+![Mobile Footer Screenshot](./images/screenshots/Footer-phoneversion.png)
 
-[Spots GitHub Pages Deployment](https://faridanelson.github.io/se_project_spots/)
+---
 
-## Descriptive Video
+## 🚀 Deployment
 
-I have created a desciptive video of the project. You can watch it here:
+The project is hosted on **GitHub Pages**.  
+👉 [Live Demo – Spots GitHub Pages Deployment](https://faridanelson.github.io/se_project_spots/)
 
-[[Descriptive Video]](https://drive.google.com/file/d/1BL5wsUZipyhruowlOKiAoG0ZwIwoPb14/view?usp=sharing)
+---
 
-## Author
+## 🎥 Descriptive Video
 
-Farida Nelson
+A walkthrough video of the project is available here:  
+📺 [Descriptive Video](https://drive.google.com/file/d/1BL5wsUZipyhruowlOKiAoG0ZwIwoPb14/view?usp=sharing)
+
+---
+
+## 👩‍💻 Author
+
+**Farida Nelson**
+
+---
+
+## 🧪 Local Development & Webpack Setup
+
+To run this project locally with Webpack Dev Server:
+
+### 📝 Prerequisites
+
+- [Node.js & npm](https://nodejs.org/) installed on your machine
+- Git (if cloning from GitHub)
+
+### 🚀 Installation Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/faridanelson/se_project_spots.git
+cd se_project_spots
+
+# 2. Install dependencies
+npm install
+
+# 3. Run the development server
+npx webpack serve
+```
