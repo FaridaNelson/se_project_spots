@@ -123,6 +123,12 @@
   cursor: pointer;
 }
 
+.modal__form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .modal__form input.modal__input_type_error {
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
@@ -151,11 +157,18 @@
 
 .modal__submit-button {
   border: none;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
   width: 156px;
   padding: 18px;
   border-radius: 8px;
   color: #fcf5e5;
   background-color: #212121;
+}
+
+.modal__submit-button_delete_card {
+  background-color: #ff6565;
+  color: #212121;
 }
 
 .modal__submit-button_disabled {
@@ -167,6 +180,17 @@
 .modal__submit-button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.modal__cancel-button {
+  border: 1px solid #212121;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 156px;
+  padding: 18px;
+  border-radius: 8px;
+  color: #212121;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 627px) {
