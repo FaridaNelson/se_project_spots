@@ -8,6 +8,14 @@ class Api {
     return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
+  getUserInfo() {
+    return fetch(`${this._baseUrl}/users/me`, {
+      headers: this._headers,
+    }).then((res) =>
+      res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
+    );
+  }
+
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
@@ -16,9 +24,14 @@ class Api {
     );
   }
 
-  getUserInfo() {
-    return fetch(`${this._baseUrl}/users/me`, {
+  addNewCard({ name, link }) {
+    return fetch(`${this._baseUrl}/cards`, {
+      method: "POST",
       headers: this._headers,
+      body: JSON.stringify({
+        name,
+        link,
+      }),
     }).then((res) =>
       res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
     );
@@ -44,6 +57,24 @@ class Api {
       body: JSON.stringify({
         avatar,
       }),
+    }).then((res) =>
+      res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
+    );
+  }
+
+  deleteCard(id) {
+    return fetch(`${this._baseUrl}/cards/${id}`, {
+      method: "DELETE",
+      headers: this._headers,
+    }).then((res) =>
+      res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
+    );
+  }
+
+  changeLikeStatus(id, isLiked) {
+    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+      method: isLiked ? "DELETE" : "PUT",
+      headers: this._headers,
     }).then((res) =>
       res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
     );

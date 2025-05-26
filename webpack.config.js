@@ -10,8 +10,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publicPath: "",
+    filename: "[name].js",
+    publicPath: "/",
   },
 
   mode: "development",
@@ -54,14 +54,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       favicon: "./src/favicon.ico",
     }),
+    new MiniCssExtractPlugin(),
     new CopyWebpackPlugin({
       patterns: [{ from: "src/favicon.ico", to: "favicon.ico" }],
     }),
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
   ],
 };

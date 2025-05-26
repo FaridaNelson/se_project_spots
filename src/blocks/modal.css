@@ -41,6 +41,11 @@
   width: auto;
 }
 
+.modal__container.modal__container_delete_card {
+  width: 630px;
+  padding: 32px 20px;
+}
+
 .modal__image {
   max-width: 80vw;
   max-height: 80vh;
@@ -62,6 +67,13 @@
   border: 2px;
   background-color: transparent;
   cursor: pointer;
+}
+
+.modal__close-button_delete_card {
+  position: relative;
+  background-image: url(../images/x-wht.svg);
+  right: -350px;
+  color: #fff;
 }
 
 .modal__close-button:hover {
@@ -101,14 +113,21 @@
   color: #212121;
 }
 
+.modal__title.modal__title_delete_card {
+  font-size: 24px;
+  justify-self: center;
+}
+
 .modal__label {
   display: flex;
   flex-direction: column;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   gap: 8px;
   margin-bottom: 32px;
   color: rgba(33, 33, 33, 0.7);
   font-weight: 500;
   line-height: 17.6px;
+  font-size: 16px;
 }
 
 .modal__input {
@@ -123,7 +142,7 @@
   cursor: pointer;
 }
 
-.modal__form {
+.modal__form.modal__form_delete_card {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -171,6 +190,11 @@
   color: #212121;
 }
 
+.modal__submit-button.modal__submit-button_delete_card:hover {
+  background-color: #ff3333;
+  opacity: 1;
+}
+
 .modal__submit-button_disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -193,6 +217,20 @@
   background-color: transparent;
 }
 
+.modal__cancel-button:hover {
+  background-color: #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .modal__close-button.modal__close-button_delete_card {
+    top: -16px;
+    right: -300px;
+    z-index: 10;
+  }
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
@@ -213,6 +251,24 @@
     line-height: 20px;
   }
 
+  .modal__title.modal__title_delete_card {
+    font-size: 20px;
+    text-align: center;
+    line-height: 120%;
+  }
+
+  .modal__form.modal__form_delete_card {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .modal__container.modal__container_delete_card {
+    width: 300px;
+    padding: 12px;
+  }
+
   .modal__close-button {
     top: 12px;
     right: 12px;
@@ -226,6 +282,12 @@
     padding: 0;
   }
 
+  .modal__close-button.modal__close-button_delete_card {
+    top: -16px;
+    right: -140px;
+    z-index: 10;
+  }
+
   .modal__label {
     margin-bottom: 24px;
   }
@@ -236,6 +298,14 @@
 
   .modal__submit-button {
     width: 100%;
+  }
+
+  .modal__submit-button.modal__submit-button_delete_card {
+    width: 156px;
+  }
+
+  .modal__cancel-button {
+    width: 156px;
   }
 }
 
