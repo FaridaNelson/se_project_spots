@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "card__like-button_liked"
     );
     api
-      .changeLikeStatus(id, !isLiked)
+      .changeLikeStatus(id, isLiked)
       .then((updatedCard) => {
         console.log("API response:", updatedCard);
 
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardLikeButton = cardElement.querySelector(".card__like-button");
     const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
-    if (data.isLiked && data.isLiked.some((user) => user._id === api.userId)) {
+    if (data.isLiked === true) {
       cardLikeButton.classList.add("card__like-button_liked");
     }
 
