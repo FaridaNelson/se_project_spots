@@ -25,6 +25,7 @@
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .profile__avatar-btn::after {

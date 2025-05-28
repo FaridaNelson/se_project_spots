@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -10,8 +9,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
-    publicPath: "/",
+    filename: "main.js",
+    publicPath: "",
   },
 
   mode: "development",
@@ -31,7 +30,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        exclude: /node_modules/,
+        exclude: "/node_modules/",
       },
       {
         test: /\.css$/,
@@ -40,28 +39,23 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              // Add an options object
               importLoaders: 1,
             },
           },
-          "postcss-loader", // Add the postcss loader
+          "postcss-loader",
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/favicon.ico",
     }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [{ from: "src/favicon.ico", to: "favicon.ico" }],
-    }),
   ],
 };
