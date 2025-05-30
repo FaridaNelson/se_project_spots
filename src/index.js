@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const cardSubmitButton = cardModal.querySelector(".modal__submit-button");
   const cardLinkInput = cardModal.querySelector("#add-card-link-input");
   const cardCaptionInput = cardModal.querySelector("#add-card-caption-input");
-  const cardLikeButton = document.querySelector(".card__like-button");
 
   const previewModal = document.querySelector("#preview-modal");
   const previewModalImage = previewModal.querySelector(".modal__image");
@@ -89,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //Avatar modal elements
   const avatarModal = document.querySelector("#avatar-modal");
   const avatarFormElement = avatarModal.querySelector(".modal__form");
-  const avatarSubmitButton = avatarModal.querySelector(".modal__submit-button");
   const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
 
   //Delete modal elements
@@ -240,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
     evt.preventDefault();
 
     const submitBtn = evt.submitter;
-    submitBtn.textContent = "Deleting...";
+    setButtonText(submitBtn, true, "Deleting...", "Delete");
     api
       .deleteCard(selectedCardId)
       .then(() => {
@@ -251,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error(err);
       })
       .finally(() => {
-        submitBtn.textContent = "Delete";
+        setButtonText(submitBtn, false, "Deleting...", "Delete");
       });
   }
 
@@ -292,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .editAvatarInfo(avatar)
       .then((data) => {
         document.querySelector(".profile__avatar").src = data.avatar;
-        cardFormElement.reset();
+        avatarFormElement.reset();
         disableButton(submitBtn, settings);
         closeModal(avatarModal);
       })
